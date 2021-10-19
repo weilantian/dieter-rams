@@ -1,0 +1,41 @@
+:root {
+  /* Colors */
+  --bg-gray-100: rgba(0, 0, 0, 8%);
+  --bg-gray-200: rgba(0, 0, 0, 4%);
+  --light-orange: #FF5E4C;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* Add font here */
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}

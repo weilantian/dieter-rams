@@ -1,0 +1,217 @@
+nav {
+    margin: 18px 24px;
+    overflow: hidden;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*animation-name: navIdle;*/
+    /*animation-duration: 1s;*/
+    /*animation-fill-mode: forwards;*/
+}
+
+.nav-button--animated {
+    overflow: hidden;
+}
+
+.nav-link-animated * {
+    animation-name: navIdle;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    visibility: hidden;
+}
+
+.nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width:48px;
+    height:48px;
+    background: var(--light-orange);
+    cursor: pointer;
+    transition: all 1s;
+    /*做成时间轴*/
+
+}
+.nav-button:hover {
+    transform: scale(0.8);
+}
+
+.nav-button--animated {
+    z-index: 100;
+    position:fixed;
+    animation-name: navDrawerOpen;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+    cursor: default;
+}
+.nav-button--animated:hover {
+    transform: none !important;
+}
+.nav-button--animated img {
+    display: none;
+}
+
+.nav-list {
+    display: none;
+}
+
+@media(min-width:768px) {
+    .nav-list {
+        display: block;
+    }
+
+}
+
+.nav-list ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin-left:32px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color:black;
+    font-size: 22px;
+}
+
+@keyframes navIdle {
+    0% {
+        visibility: visible;
+        opacity:0;
+        transform: translateY(100%);
+    }
+    100% {visibility: visible;opacity: 1; transform: translateY(0);}
+}
+
+
+
+.link {
+    position:relative;
+}
+
+.link::before,
+.link::after {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    top:100%;
+    pointer-events: none;
+}
+
+.link::before {
+    content: '';
+    /* show by default */
+}
+
+.link--elara {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 1.375rem;
+}
+
+.link--elara::before {
+    transform-origin: 50% 100%;
+    transition: clip-path 0.3s, transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+    clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%, 100% 100%, 100% 0%);
+}
+
+.link--elara:hover::before {
+    transform: translate3d(0, 2px, 0) scale3d(1.08, 3, 1);
+    clip-path: polygon(0% 0%, 0% 100%, 50% 100%, 50% 0, 50% 0, 50% 100%, 50% 100%, 0 100%, 100% 100%, 100% 0%);
+}
+
+.link--elara span {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.2, 1, 0.8, 1);
+}
+
+.link--elara:hover span {
+    transform: translate3d(0, -2px, 0);
+}
+
+.link-inactive {
+    color:#6B7280 !important;
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 300;
+    background-color: #d9d9d9;
+    transition: opacity 0.3s;
+    animation-name: menuAnimation;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.menu-list ul {
+    list-style-type: none;
+    margin-top:34px;
+}
+.menu-list ul * {
+    font-size: 48px;
+    margin-top: 12px;
+    color:black;
+
+
+}
+
+.menu-header {
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity:0;
+    animation-name: headerAnimation;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes headerAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.close-btn {
+    cursor: pointer;
+}
+.close-btn img {
+    width:46px;
+    height:46px;
+}
+.menu-header h3 {
+    font-size:24px;
+    font-weight: normal;
+}
+
+
+@media (min-width: 768px) {
+    .menu-list ul * {
+        font-size: 64px;
+
+    }
+}
+

@@ -1,0 +1,43 @@
+.animated-text {
+    overflow: hidden;
+    display: block;
+}
+.animated-text * {
+    visibility: hidden;
+    animation-name: titleAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.animated-from-left * {
+    visibility: hidden;
+    animation-name: imgAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes titleAnimation {
+    0% {visibility: visible;transform: translateY(130%);}
+    100% {visibility: visible; transform: translateY(0);}
+}
+
+@keyframes imgAnimation {
+    0% {visibility: visible;transform: translateX(-130%);}
+    100% {visibility: visible; transform: translateX(0);}
+}
+.zoom-img {
+    overflow: hidden;
+}
+.zoom-img * {
+    animation-name: zoomInAnimation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes zoomInAnimation {
+    0% {
+        transform: scale(2.4)
+    }
+    100% {
+        transform: scale(1)
+    }
+}

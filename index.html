@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dieter Rams</title>
+    <link href="app/css/style.css" rel="stylesheet">
+    <link href="app/css/_index.css" rel="stylesheet">
+    <script src="./app/scripts/index.js" type="module"></script>
+</head>
+
+<body>
+<nav-bar active="home"></nav-bar>
+<section class="head">
+    <span class="head__img animated-from-left" style="display: block;overflow: hidden;"><img
+            src="./app/assets/img/RamsPortrait.jpg"/></span>
+
+    <div class="head__titles">
+        <span class="head__description animated-text"><p style="animation-delay: 0.6s;">(Industrial Designer)</p></span>
+        <span class="head__name animated-text">
+            <h1 style="animation-delay: 0.2s;">Dieter Rams</h1>
+        </span>
+    </div>
+</section>
+<section class="section-works">
+    <div class="section-header">
+        <h1 class="section-header__title">WORKS</h1>
+        <p class="section-header__description">A set of products Dieter Rams made during the years of working for german
+            company Braun.</p>
+    </div>
+
+    <div class="works">
+        <div class="product lg-product">
+            <img class="lg-product-img" src="./app/assets/img/sk5.jpg"/>
+            <div class="product-description__wrapper">
+                <div class="product-description--lg">
+                    <h1>SK 5 phonosuper</h1>
+                    <p>Successor to the groundbreaking SK 4 and SK 4 1/a, LW reception is added to the FM and MW range
+                        of the earlier models. A screen printed tuning dial on metal plate replaces the printed
+                        paper. </p>
+                </div>
+                <div class="learn-more-btn losen-learn-more">
+                    <detail-modal
+                            description="Successor to the groundbreaking SK 4 and SK 4 1/a, LW reception is added to the FM and MW range of the earlier models. A screen printed tuning dial on metal plate replaces the printed paper."
+                            imgSrc="./app/assets/img/sk5.jpg" title="SK 5 phonosuper"
+                            type="Radiogram"></detail-modal>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="works">
+        <div class="product md-product">
+            <img class="lg-product-img" src="./app/assets/img/tg60.jpg"/>
+            <div class="product-description__wrapper">
+                <div class="product-description">
+                    <h1>TG 60</h1>
+                    <p>Reel-to-reel player/ recorder with white housing, compatible with audio 1/2/350 and TS 45. </p>
+                </div>
+                <div class="" style="margin-top:12px;grid-row: 2;grid-column: 1/12;">
+                    <detail-modal
+                            description="According to accompanying literature, 'Even though designed as a home tape recorder the TG 60 nevertheless meets demands placed on costly studio equipment.'"
+                            imgSrc="./app/assets/img/tg60.jpg" title="TG 60"
+                            type="Reel-to-reel player/ recorder"></detail-modal>
+                </div>
+            </div>
+        </div>
+        <div class="product sm-product">
+            <img class="lg-product-img" src="./app/assets/img/et23.jpeg"/>
+            <div class="product-description__wrapper">
+                <div class="product-description">
+                    <h1>ET 23</h1>
+                    <p>Beautiful brown / black / yellow keyed arithmetic calculator with 8 digits precision and
+                        algebraic logic. The pre-lcd vacuum fluorescent display shows green numerals.
+                    </p>
+                </div>
+                <div class="learn-more-btn" style="margin-top:12px;grid-row: 2;grid-column: 1/12;">
+                    <detail-modal
+                            description="Beautiful brown / black / yellow keyed arithmetic calculator with  8 digits precision and algebraic logic. The pre-lcd vacuum fluorescent display shows green numerals."
+                            imgSrc="./app/assets/img/et23.jpeg"
+                            title="ET 23"
+                            type="Calculator">
+
+                    </detail-modal>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="works">
+        <div class="product sm-product--reversed">
+            <img class="lg-product-img" src="./app/assets/img/t3.jpg"/>
+            <div class="product-description__wrapper">
+                <div class="product-description">
+                    <h1>T3</h1>
+                    <p>Early pocket radio of '58, recently much compared with the first generation Apple iPod. </p>
+                </div>
+                <div class="learn-more-btn" style="margin-top:12px;grid-row: 2;grid-column: 1/12;">
+
+                    <detail-modal
+                            description="Early pocket radio of '58, recently much compared with the first generation Apple iPod. The T 3 is foundational for Braun Design through Dieter Rams' collaboration on it with members of the HfG Ulm. Along with Rams' work with Gugelot on the SK 4 phonosuper,  and Herbert Lindinger's study on a modular programme, this formative encounter set the course of Rams' work for Braun during the heroic period of the 1960s."
+                            imgSrc="./app/assets/img/t3.jpg"
+                            title="T3"
+                            type="Radio">
+
+                    </detail-modal>
+                </div>
+            </div>
+        </div>
+        <div class="product md-product--reversed">
+            <img class="lg-product-img" src="./app/assets/img/phase%201(acrylic).jpg"/>
+            <div class="product-description__wrapper">
+                <div class="product-description">
+                    <h1>Phase 1</h1>
+                    <p>Very scarce version of the phase 1 clock with acrylic housing and battery operation. </p>
+                </div>
+                <div class="learn-more-btn" style="margin-top:12px;grid-row: 2;grid-column: 1/12;">
+                    <detail-modal
+                            description="Very scarce version of the phase 1 clock with acrylic housing and battery operation."
+                            imgSrc="./app/assets/img/phase%201(acrylic).jpg" title="Phase 1 (acrylic)"
+                            type="Analog Clock"></detail-modal>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<cool-footer></cool-footer>
+</body>
+
+
+</html>

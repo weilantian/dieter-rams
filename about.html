@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Dieter Rams</title>
+  <link href="./app/css/style.css" rel="stylesheet">
+  <link href="./app/css/_about.css" rel="stylesheet">
+  <script src="./app/scripts/index.js" type="module"></script>
+</head>
+
+<body>
+<nav-bar active="about"></nav-bar>
+<section>
+  <span class="animated-text--idle"><h1 class="about-title">About Dieter Rams</h1></span>
+  <div class="two-column">
+    <div class="about__info">
+      <span class="animated-text--idle"><p>Dieter Rams, born 1932 in Wiesbaden, Germany, is one of the most influential industrial designers in the world.</span>
+
+      </p>
+    </div>
+    <div class="about__img zoom-img">
+      <img src="./app/assets/img/dieter-rams-vitsoe-portrait.jpg">
+    </div>
+  </div>
+  </section>
+<section class="principle-section">
+  <span class="animated-text--idle"><h1 class="section-title">Design Principle</h1></span>
+  <div style="align-items: center;" class="two-column">
+    <div class="about__info">
+      <span class="animated-text--idle"><h3>Less but butter</h3></span>
+
+    </div>
+    <div class="about__info--right">
+      <span class="animated-text--idle"><p>Less, but better – because it concentrates on the essential aspects, and the products are not burdened with non-essentials.
+      </p></span>
+
+    </div>
+  </div>
+  <div style="margin-bottom:120px;" class="two-column">
+    <div class="picture-box">
+      <div>
+        <img src="./app/assets/img/dieter_ram_book_tl010611_05.jpg">
+        <p class="picture-box__description">Diter Rams's studio</p>
+      </div>
+
+
+
+    </div>
+
+</div>
+</section>
+<cool-footer></cool-footer>
+<script>
+
+    document.querySelectorAll('.animated-text--idle').forEach((link, index) => {
+      link.firstChild.style.animationDelay = `${(index + 1) * 0.2}s`
+      setTimeout(() => {
+        link.classList.add("animated-text")
+      }, 0)
+
+    })
+
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,172 @@
+.learn-more-btn a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.learn-more-btn a img {
+    margin-left: 12px;
+    transition: margin-left 0.4s;
+}
+.learn-more-btn a:hover img {
+    margin-left: 6px;
+}
+
+.learn-more-btn a:hover {
+    transform: scale(0.95);
+}
+
+.product-modal {
+    z-index: 100;
+    width: 100vw;
+    height:100vh;
+    position:fixed;
+    top:0;
+    left:0;
+    background: white;
+    display: flex;
+    transition: all 0.4s;
+    flex-direction: column;
+}
+
+.img__container {
+    width:100vw;
+    height:30vh;
+}
+
+
+
+.img {
+    opacity: 0;
+    width:100vw;
+    height:30vh;
+    object-fit: cover;
+    animation-name: imgAnimation;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+
+
+
+
+@keyframes imgAnimation {
+    0% {
+        visibility: visible;
+        opacity:0;
+    }
+    100% {visibility: visible;opacity: 1}
+}
+
+.product-modal__closeBtn {
+    width:42px;
+    height: 42px;
+    border-radius: 50px;
+    background-color: #EDEDED;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top:30px;
+    right:40px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.product-modal__info-wrapper {
+    position: relative;
+
+    width:100vw;
+    height: 50vh;
+}
+
+.product-modal__info {
+    position: absolute;
+    bottom: 10%;
+    padding: 52px 32px;
+
+}
+
+.description * {
+    font-size:14px;
+}
+
+.title * {
+    font-size:24px;
+}
+
+.type * {
+    font-size:20px;
+}
+
+
+
+@media (min-width:768px) {
+    .title * {
+        font-size:32px;
+    }
+    .type * {
+        font-size: 24px;
+    }
+    .description * {
+        font-size:16px;
+    }
+    .product-modal {
+        flex-direction: row;
+    }
+    .img__container {
+        width:50vw;
+        height:100vh
+    }
+    .img {
+        width:50vw;
+        height:100vh
+    }
+    .product-modal__info {
+
+        bottom: 20%;
+        padding: 52px 42px;
+    }
+    .product-modal__info-wrapper {
+        padding: 52px 42px;
+        width:50vw;
+        height:100vh;
+    }
+
+}
+.product-modal__info h2,h1,p {
+    margin:unset;
+    padding: unset;
+    overflow: hidden;
+}
+
+.product-modal__info h2 {
+    margin-top:12px;
+    color: rgba(0, 0, 0, 40%);
+}
+
+.product-modal__info p {
+    margin-top:24px;
+    color: rgba(0, 0, 0, 80%);
+    font-size: 18px;
+}
+
+@keyframes textAnimation {
+    0% {
+        visibility: visible;
+        opacity:0;
+        transform: translateY(100%);
+    }
+    100% {visibility: visible;opacity: 1; transform: translateY(0);}
+}
+
+.text-animated * {
+    display: block;
+    visibility: hidden;
+    animation-name: textAnimation;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+}
